@@ -23,3 +23,4 @@ R = {'P' : None, 'S' : None}
 RectPS(x1,y1,x2,y2,R)
 print('P = ', R['P'])
 print('S = ', R['S'])
+print('S = ', R['S'])
