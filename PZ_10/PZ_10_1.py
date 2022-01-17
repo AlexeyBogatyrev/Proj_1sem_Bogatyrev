@@ -33,15 +33,26 @@ f1.close()
 f1 = open('file_1.txt', encoding='utf-8')
 min, t = 0, 0
 for i in range(len(k)):
-    min = min if min > k[i] else k[i]
+    min = min if min < k[i] else k[i]
     if k[i] < 0:
         t += 1
 
+f1 = open('file_1.txt', encoding='utf-8')
+max, t = 0, 0
+for i in range(len(k)):
+    max = max if max > k[i] else k[i]
+    if k[i] < 0:
+        t += 1
+
+l1 = [i * max for i in list(l)]
+print(type(l))
 f2 = open('file_2.txt', 'a', encoding='utf-8')
 f2.write('\n')
 print('Количество элементов: ', len(k), file=f2)
 f2.write('\n')
-print('Максимальный элемент: ', min, file=f2)
+print('Минимальный элемент: ', min, file=f2)
+f2.write('\n')
+print('Элементы, умноженные на первый максимальный элемент: ', l1, file=f2)
 f2.close()
 
 
