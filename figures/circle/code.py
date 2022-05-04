@@ -1,13 +1,10 @@
-def circle_perimeter():
-    default_radius = 5
-    dlina = 2 * 3.14 * default_radius
-
-    return dlina
-def circle_area():
-    default_radius = 5
-    s = default_radius ** 2 * 3.14
-
-    return s
+import math
 
 
+def circle_area(r=5):
+    res = math.pi * (int(r)**2)
+    print('Площадь окружности:', round(res, 1))
 
+
+def circle_perimeter(r=5):
+    print('Длина окружности:', 2 * math.pi * r)
